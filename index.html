@@ -2,20 +2,64 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>簡単な計算機</title>
-    <script>
-        function calculate() {
-            const num1 = parseFloat(document.getElementById("number1").value);
-            const num2 = parseFloat(document.getElementById("number2").value);
-            const sum = num1 + num2;
-            alert("合計は: " + sum);
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算数計算機</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-    </script>
+        input[type="number"] {
+            width: 100px;
+            margin: 5px;
+        }
+        button {
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>簡単な計算機</h1>
-    <input type="number" id="number1" placeholder="数値1">
-    <input type="number" id="number2" placeholder="数値2">
-    <button onclick="calculate()">計算する</button>
+    <h1>算数計算機</h1>
+    <input type="number" id="num1" placeholder="数字1">
+    <input type="number" id="num2" placeholder="数字2">
+    <br>
+    <button onclick="calculate('+')">加算 (+)</button>
+    <button onclick="calculate('-')">減算 (-)</button>
+    <button onclick="calculate('*')">乗算 (×)</button>
+    <button onclick="calculate('/')">除算 (÷)</button>
+    <div id="result"></div>
+
+    <script>
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "数字を入力してください。";
+            } else {
+                switch (operation) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num2 !== 0 ? num1 / num2 : "0で割ることはできません。";
+                        break;
+                }
+            }
+
+            document.getElementById('result').innerText = "結果: " + result;
+        }
+    </script>
 </body>
 </html>
