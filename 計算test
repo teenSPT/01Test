@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>簡単な計算機</title>
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const sum = num1 + num2;
+            alert("合計は: " + sum);
+        }
+    </script>
+</head>
+<body>
+    <h1>簡単な計算機</h1>
+    <input type="number" id="number1" placeholder="数値1">
+    <input type="number" id="number2" placeholder="数値2">
+    <button onclick="calculate()">計算する</button>
+</body>
+</html>
