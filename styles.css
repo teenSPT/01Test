@@ -15,8 +15,8 @@ body {
 
 input, select, button {
     width: 100%;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 3px 0;
+    padding: 3px;
     border: 1px solid #0d2818; 
     border-radius: 5px;
     background-color: #152020;
