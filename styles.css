@@ -45,18 +45,18 @@ button:hover {
 
 .radio-group {
     display: flex;
-    justify-content: space-between; /* 左右に配置 */
+    justify-content: flex-start; /* 左寄せ */
     margin: 5px 0; /* 上下のマージン */
 }
 
 .radio-group input {
-    margin-right: 1px; /* ラジオボタンとラベルの間のスペース */
+    margin-right: 5px; /* ラジオボタンとラベルの間のスペース */
 }
 
-/* ラジオボタンのラベルの間隔を狭くする */
 .radio-group label {
-    margin-right: 1px; /* ラジオボタンとラベルの間のスペースを調整 */
+    margin-right: 10px; /* ラジオボタンとラベルの間のスペースを調整 */
 }
+
 
 @media (max-width: 768px) {
     .container {
