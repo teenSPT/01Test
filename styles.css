@@ -6,7 +6,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 300px; /* 最大幅を500pxに設定 */
+    max-width: 500px; /* 最大幅を500pxに設定 */
     margin: 0 auto;
     padding: 20px;
     background-color: #2a2e37;
@@ -21,7 +21,7 @@ input, select, button {
     border-radius: 5px;
     background-color: #152020;
     color: #9cbf9c;
-    font-size: 14px;    
+    font-size: 15px;    
 }
 
 input::placeholder {
@@ -53,9 +53,14 @@ button:hover {
     margin-right: 1px; /* ラジオボタンとラベルの間のスペース */
 }
 
+/* ラジオボタンのラベルの間隔を狭くする */
+.radio-group label {
+    margin-right: 1px; /* ラジオボタンとラベルの間のスペースを調整 */
+}
+
 @media (max-width: 768px) {
     .container {
-        padding: 10px; /* パディングを減らす */
+        padding: 10%; /* パディングを減らす */
     }
     input, select, button {
         font-size: 14px; /* フォントサイズを調整 */
