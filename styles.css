@@ -2,6 +2,7 @@ body {
     background-color: #1a1e27;
     color: #9cae6a;
     font-family: '黒薔薇ゴシック heavy', sans-serif;
+    font-weight: bold; /* 太文字に設定 */
     overflow-x: hidden; /* 横スクロールを防ぐ */
 }
 
@@ -23,6 +24,7 @@ input, select, button {
     background-color: #152020;
     color: #9eb69e;
     font-family: '黒薔薇ゴシック heavy', sans-serif;
+    font-weight: bold; /* 太文字に設定 */
     font-size: 16px;    
 }
 
