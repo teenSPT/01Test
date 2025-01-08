@@ -1,0 +1,53 @@
+body {
+    background-color: #1a1e27;
+    color: #9cae6a;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2a2e37;
+    border-radius: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #0d2818; 
+    border-radius: 5px;
+    background-color: #152020;
+    color: #9cbf9c;
+    font-size: 15px;    
+}
+
+input::placeholder {
+    color: #1cff60; /* プレースホルダーの文字色 */
+}
+
+input:focus, select:focus {
+    border-color: #fffb1b; /* フォーカス時のボーダーの色 */
+    outline: none; /* デフォルトのアウトラインを消す */
+}
+
+button {
+    background-color: #022b0c;
+    color: rgb(237, 249, 189);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9ae73;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    margin: 5px 0; /* 上下のマージン */
+}
+
+.radio-group input {
+    margin-right: 5px; /* ラジオボタンとラベルの間のスペース */
+}

@@ -3,63 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>算数計算機</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        input[type="number"] {
-            width: 100px;
-            margin: 5px;
-        }
-        button {
-            margin: 5px;
-        }
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <title>ポジくん</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>算数計算機</h1>
-    <input type="number" id="num1" placeholder="数字1">
-    <input type="number" id="num2" placeholder="数字2">
-    <br>
-    <button onclick="calculate('+')">加算 (+)</button>
-    <button onclick="calculate('-')">減算 (-)</button>
-    <button onclick="calculate('*')">乗算 (×)</button>
-    <button onclick="calculate('/')">除算 (÷)</button>
-    <div id="result"></div>
+    <div class="container">
+        <h1></h1>
+        <label for="balance">Balance:</label>
+        <input type="number" id="balance" value="100000">
 
-    <script>
-        function calculate(operation) {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            let result;
+        <label for="position">Posi:</label>
+        <input type="number" id="position">
 
-            if (isNaN(num1) || isNaN(num2)) {
-                result = "数字を入力してください。";
-            } else {
-                switch (operation) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        result = num2 !== 0 ? num1 / num2 : "0で割ることはできません。";
-                        break;
-                }
-            }
+        <label for="stopLoss">SL:</label>
+        <input type="number" id="stopLoss">
 
-            document.getElementById('result').innerText = "結果: " + result;
-        }
-    </script>
+        <label for="spread">Spread:</label>
+        <input type="number" id="spread">
+
+        <label>Bid / Ask:</label>
+        <div class="radio-group">
+            <input type="radio" name="bidAsk" value="Bid" id="bid" checked>
+            <label for="bid"></label>
+            <input type="radio" name="bidAsk" value="Ask" id="ask">
+            <label for="ask"></label>
+        </div>
+
+        <label for="risk">Risk %:</label>
+        <select id="risk">
+            <option value="0.25">0.25</option>
+            <option value="0.5">0.5</option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7.5">7.5</option>
+            <option value="custom">Custom</option>
+        </select>
+        <input type="number" id="customRisk" placeholder="Custom Risk %" style="display:none;">
+
+        <label for="exchange">Exch.:</label>
+        <select id="exchange">
+            <option value="None">None</option>
+            <option value="USDJPY">USDJPY</option>
+            <option value="custom">Custom</option>
+        </select>
+        <input type="number" id="customExchange" placeholder="Custom Exchange Rate" style="display:none;">
+
+        <label for="lotSize">1Lot:</label>
+        <select id="lotSize">
+            <option value="0.01">0.01</option>
+            <option value="0.1">0.1</option>
+            <option value="1">1</option>
+            <option value="10">10</option>
+            <option value="100">100</option>
+            <option value="1000">1000</option>
+            <option value="custom">Custom</option>
+        </select>
+        <input type="number" id="customLotSize" placeholder="Custom Lot Size" style="display:none;">
+
+        <button id="calculateButton">🔥</button>
+        <button id="copyButton">Copy Size</button>
+
+        <div id="result"></div>
+        <div id="trueDistance"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
