@@ -52,3 +52,12 @@ button:hover {
 .radio-group input {
     margin-right: 5px; /* ラジオボタンとラベルの間のスペース */
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* パディングを減らす */
+    }
+    input, select, button {
+        font-size: 14px; /* フォントサイズを調整 */
+    }
+}
