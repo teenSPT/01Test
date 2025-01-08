@@ -15,7 +15,7 @@ body {
 
 input, select, button {
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 3px;
     border: 1px solid #0d2818; 
     border-radius: 5px;
@@ -50,7 +50,7 @@ button:hover {
 }
 
 .radio-group input {
-    margin-right: 20px; /* ラジオボタンとラベルの間のスペース */
+    margin-right: 25px; /* ラジオボタンとラベルの間のスペース */
 }
 
 .radio-group label {
