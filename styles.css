@@ -50,7 +50,7 @@ button:hover {
 }
 
 .radio-group input {
-    margin-right: 5px; /* ラジオボタンとラベルの間のスペース */
+    margin-right: 1px; /* ラジオボタンとラベルの間のスペース */
 }
 
 @media (max-width: 768px) {
