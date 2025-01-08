@@ -6,7 +6,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 300px; /* 最大幅を500pxに設定 */
+    max-width: 250px; /* 最大幅を500pxに設定 */
     margin: 0 auto;
     padding: 10px;
     background-color: #2a2e37;
