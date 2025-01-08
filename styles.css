@@ -2,6 +2,7 @@ body {
     background-color: #1a1e27;
     color: #9cae6a;
     font-family: '黒薔薇ゴシック heavy', sans-serif;
+    overflow-x: hidden; /* 横スクロールを防ぐ */
 }
 
 .container {
