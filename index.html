@@ -31,16 +31,35 @@
         </div>
         
         <label for="risk">Risk %:</label>
-        <select id="risk">
+        <select id="risk" onchange="toggleCustomRisk()">
             <option value="0.25">0.25</option>
             <option value="0.5">0.5</option>
-            <option value="1">1</option>
+            <option value="1" selected>1</option> <!-- デフォルトで1を選択 -->
             <option value="3">3</option>
             <option value="5">5</option>
             <option value="7.5">7.5</option>
             <option value="custom">Custom</option>
         </select>
         <input type="number" id="customRisk" placeholder="Risk %" style="display:none;">
+        
+        <script>
+        function toggleCustomRisk() {
+            const riskSelect = document.getElementById('risk');
+            const customRiskInput = document.getElementById('customRisk');
+            
+            if (riskSelect.value === 'custom') {
+                customRiskInput.style.display = 'block'; // Customが選択されたら表示
+            } else {
+                customRiskInput.style.display = 'none'; // 他の選択肢が選ばれたら非表示
+            }
+        }
+        
+        // ページ読み込み時にカスタムリスクの表示状態を設定
+        window.onload = function() {
+            toggleCustomRisk();
+        };
+        </script>
+        
 
         <label for="exchange">Exch.:</label>
         <select id="exchange">
@@ -51,16 +70,35 @@
         <input type="number" id="customExchange" placeholder="Exchange" style="display:none;">
 
         <label for="lotSize">1Lot:</label>
-        <select id="lotSize">
+        <select id="lotSize" onchange="toggleCustomLotSize()">
             <option value="0.01">0.01</option>
             <option value="0.1">0.1</option>
-            <option value="1">1</option>
+            <option value="1" selected>1</option> <!-- デフォルトで1を選択 -->
             <option value="10">10</option>
             <option value="100">100</option>
             <option value="1000">1000</option>
             <option value="custom">Custom</option>
         </select>
         <input type="number" id="customLotSize" placeholder="Lot" style="display:none;">
+        
+        <script>
+        function toggleCustomLotSize() {
+            const lotSizeSelect = document.getElementById('lotSize');
+            const customLotSizeInput = document.getElementById('customLotSize');
+            
+            if (lotSizeSelect.value === 'custom') {
+                customLotSizeInput.style.display = 'block'; // Customが選択されたら表示
+            } else {
+                customLotSizeInput.style.display = 'none'; // 他の選択肢が選ばれたら非表示
+            }
+        }
+        
+        // ページ読み込み時にカスタムロットサイズの表示状態を設定
+        window.onload = function() {
+            toggleCustomLotSize();
+        };
+        </script>
+        
 
         <button id="calculateButton">🔥</button>
         <button id="copyButton">Copy</button>
