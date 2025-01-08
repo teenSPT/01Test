@@ -21,7 +21,7 @@ input, select, button {
     border-radius: 5px;
     background-color: #152020;
     color: #9cbf9c;
-    font-size: 15px;    
+    font-size: 14px;    
 }
 
 input::placeholder {
