@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    width: 200%;
+    width: 100%;
     max-width: 300px; /* 最大幅を500pxに設定 */
     margin: 0 auto;
     padding: 10px;
@@ -21,7 +21,8 @@ input, select, button {
     border: 1px solid #0d2818; 
     border-radius: 10px;
     background-color: #152020;
-    color: #9cbf9c;
+    color: #9eb69e;
+    font-family: '黒薔薇ゴシック heavy', sans-serif;
     font-size: 16px;    
 }
 
@@ -34,6 +35,13 @@ input:focus, select:focus {
     outline: none; /* デフォルトのアウトラインを消す */
 }
 
+/* スピンボタンを非表示にする */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* WebKitブラウザ用 */
+    margin: 0; /* マージンを0に設定 */
+}
+
 button {
     background-color: #022b0c;
     color: rgb(237, 249, 189);
@@ -41,7 +49,7 @@ button {
 }
 
 button:hover {
-    background-color: #c9ae73;
+    background-color: #436733;
 }
 
 .radio-group {
