@@ -8,7 +8,7 @@ body {
     width: 100%;
     max-width: 300px; /* 最大幅を500pxに設定 */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #2a2e37;
     border-radius: 10px;
 }
