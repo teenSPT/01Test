@@ -25,7 +25,7 @@ input, select, button {
 }
 
 input::placeholder {
-    color: #1cff60; /* プレースホルダーの文字色 */
+    color: #3960444c; /* プレースホルダーの文字色 */
 }
 
 input:focus, select:focus {
@@ -50,7 +50,7 @@ button:hover {
 }
 
 .radio-group input {
-    margin-right: 30px; /* ラジオボタンとラベルの間のスペース */
+    margin-right: 33px; /* ラジオボタンとラベルの間のスペース */
 }
 
 .radio-group label {
@@ -64,6 +64,6 @@ button:hover {
         padding: 10%; /* パディングを減らす */
     }
     input, select, button {
-        font-size: 15px; /* フォントサイズを調整 */
+        font-size: 16px; /* フォントサイズを調整 */
     }
 }
