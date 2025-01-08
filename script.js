@@ -21,7 +21,7 @@ async function calculatePositionSize() {
 
     let exchangeRate = 1;
     if (exchangeOption === 'USDJPY') {
-        exchangeRate = await getExchangeRate('YOUR_API_KEY'); // Replace with your actual API key
+        exchangeRate = await getExchangeRate('062Z81R8CII5I4MU'); // Replace with your actual API key
         if (exchangeRate === null) return; // Exit if there's an error
     } else if (exchangeOption === 'custom') {
         exchangeRate = parseFloat(document.getElementById('customExchange').value);
